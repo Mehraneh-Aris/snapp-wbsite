@@ -1,0 +1,17 @@
+{
+  "name": "snapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build":"npx @tailwindcss/cli -i ./src/input.css -o ./src/build.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

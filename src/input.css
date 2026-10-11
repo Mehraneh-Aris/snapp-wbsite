@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: "iran_Bold";
+    src: url(../assect/fonts/IRANSansXFaNum-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "iran_Light";
+    src: url(../assect/fonts/IRANSansXFaNum-Light.ttf) format("truetype");
+}
+
+@theme {
+  --font-Bold:"iran_Bold",sans-serif;
+  --font-Light:"iran_Light",sans-serif;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md:840px;
+  --breakpoint-lg:1024px;
+  --breakpoint-xl:1280px;
+  --breakpoint-2xl:1536px;
+
+  --text-clamp:clamp(0.7rem, 1vw,1rem);
+  --text-intro:clamp(1.5rem, 2vw, 2rem);
+  --text-des:clamp(1rem, 1.2vw, 2rem);
+  --text-super:clamp(0.9rem, 1vw, 2rem);
+
+  --color-green:#21aa58;
+  --color-text_nav:#414141;
+  --color-bg_gray:#f2f5f8;
+  --color-text_bg:#404040;
+  --color-text_muted:rgba(255,255,255,0.05);
+  --color-nav_res:rgba(0,0,0,0.5);
+  --color-bg-dark1:#242424;
+  --color-bg-dark2:#000;
+
+}
