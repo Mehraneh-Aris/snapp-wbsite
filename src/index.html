@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,127 @@
     <link rel="shortcut icon" href="../assect/img/Untitled.png" type="image/x-icon">
     <title> ساخت وبسایت اسنپ</title>
 </head>
+
 <body>
-    
+
+    <!-- navbar section -->
+    <div class="site-header">
+        <div class="site-header__inner">
+            <div class="site-header__mobile">
+                <svg id="hamber_menu" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-list curser-pointer dark:bg-white dark:rounded-sm" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+
+                <img src="../assect/img/snappTextLogo.svg" alt="">
+            </div>
+
+            <img src="../assect/img/snappTextLogo.svg" class="snapp-logo" alt="">
+            <ul class="nav-list">
+                <li class="list-content list-product">سوپر اپ اسنپ
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                        class="bi bi-chevron-down mx-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                    </svg>
+
+                    <ul class="menu">
+                        <li class="content-menu">درخواست تاکسی</li>
+                        <li class="content-menu">پیک موتوری</li>
+                        <li class="content-menu">سفارش انلاین غذا</li>
+                        <li class="content-menu">سوپر مارکت</li>
+                        <li class="content-menu">رزرو هتل</li>
+                        <li class="content-menu">رزرو بلیط</li>
+                    </ul>
+
+                </li>
+                <li class="list-content">ثبت نام راننده اسنپ</li>
+                <li class="list-content">باشگاه رانندگان</li>
+                <li class="list-content">پنل سازمانی </li>
+                <li class="list-content">بلاگ</li>
+                <li class="list-content list-product">درباره اسنپ
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                        class="bi bi-chevron-down mx-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                    </svg>
+
+                    <ul class="menu">
+                        <li class="content-menu">فرصت شغلی</li>
+                        <li class="content-menu">درباره ما</li>
+                        <li class="content-menu">تماس با ما</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="nav-res" class="nav-respon hidden">
+        <div class="main-nav-res">
+            <ul class="nav-list-res">
+                <li class="nav-res-items">
+                    <div class="items-list">
+                        <span>سوپر اپ اسنپ</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-chevron-down mx-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+
+                    </div>
+                    <ul class="menu menu-res">
+                        <li class="content-menu">درخواست تاکسی</li>
+                        <li class="content-menu">پیک موتوری</li>
+                        <li class="content-menu">سفارش انلاین غذا</li>
+                        <li class="content-menu">سوپر مارکت</li>
+                        <li class="content-menu">رزرو هتل</li>
+                        <li class="content-menu">رزرو بلیط</li>
+                    </ul>
+                </li>
+                <li class="nav-res-items navbar-items">باشگاه رانندگان</li>
+                <li class="nav-res-items navbar-items">پنل سازمانی</li>
+                <li class="nav-res-items navbar-items">بلاگ</li>
+
+                <li class="nav-res-items">
+                    <div class="items-list">
+                        <span>درباره اسنپ</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-chevron-down mx-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+
+                    </div>
+                    <ul class="menu menu-res">
+                        <li class="content-menu">فرصت شغلی</li>
+                        <li class="content-menu">درباره ما</li>
+                        <li class="content-menu">تماس با ما </li>
+                    </ul>
+                </li>
+                <hr class="divide-solid w-full my-2">
+                <li class="nav-res-items">
+                    <div class="items-list text-green">
+                        <span>اپلیکیشن اسنپ</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            class="bi bi-chevron-down mx-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+
+                    </div>
+                    <ul class="menu menu-res">
+                        <li class="content-menu">درخواست تاکسی</li>
+                        <li class="content-menu">پیک موتوری</li>
+                        <li class="content-menu">پزشک مشاور</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
