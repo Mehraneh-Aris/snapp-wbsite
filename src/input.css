@@ -69,7 +69,7 @@
     }
 
     .menu {
-        @apply hidden w-[170px] absolute top-8 list-none bg-white text-text_nav border-1 border-bg_gray flex-col justify-start font-Light rounded-lg leading-9;
+        @apply hidden w-[170px] absolute top-8 list-none bg-white text-text_nav border-1 border-bg_gray flex-col justify-start font-Light rounded-lg leading-9 z-50;
     }
 
     .list-product:hover .menu {
@@ -116,4 +116,51 @@
         @apply items-start font-Light;
     }
 
+    .hero-section {
+        @apply w-full flex;
+    }
+
+    .hero-image-wrapper {
+        @apply  hidden lg:w-1/2 md:w-1/3 md:flex  object-cover ;
+    }
+
+    .hero-image-wrapper {
+        transform: scaleX(-1);
+    }
+
+    .hero-content {
+        @apply w-full lg:w-1/2 md:w-2/3 bg-green flex justify-center items-end flex-col text-white px-7 py-2 ;
+    }
+
+    .hero-details {
+        @apply w-full md:w-3/4 ;
+    }
+
+    .subtitle {
+        @apply text-intro font-Bold md:leading-[60px] lg:leading-[50px] ;
+    }
+
+    .description {
+        @apply text-des font-Light leading-10 my-5;
+    }
+
+    .contact {
+        @apply md:flex w-full justify-start hidden ;
+    }
+
+    .tel-contact-input {
+        @apply bg-transparent border-b-2 border-white outline-none mx-3 placeholder-white text-right py-2;
+    }
+
+    .submit-btn {
+        @apply bg-white text-green cursor-pointer font-Light rounded-md px-5 py-2
+    }
+
+    .snapp-web-btn {
+        @apply border border-white rounded-md text-white px-4 py-3 cursor-pointer font-Light mt-8 mb-3 md:inline-block hidden hover:bg-text_muted ;
+    }
+
+    .snapp-app-btn {
+        @apply border border-white rounded-md text-black px-4 py-3 cursor-pointer font-Light mt-8 mb-3 md:hidden flex justify-center items-center bg-white ;    
+    }
 }
