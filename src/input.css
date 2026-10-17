@@ -211,4 +211,24 @@
     .services-description {
         @apply font-Light md:flex hidden text-text_nav mx-3 ;
     }
+
+    .slider-section {
+        @apply md:w-3/4 relative w-11/12 rounded-xl overflow-hidden mx-auto my-14 ;
+    }
+
+    .slider-image-wrapper {
+        @apply w-full h-[200px] sm:h-[280px] md:h-[400px] object-cover object-center  ;
+    }
+
+    .slider-button-container {
+        @apply absolute bottom-4 flex justify-center backdrop-blur-sm w-full bg-[rgba(255,255,255,0.5)] py-2 ;
+    }
+
+    .slider-button {
+        @apply cursor-pointer size-[10px] rounded-full bg-gray-500 mx-1 ;
+    }
+
+    .slider-button.active {
+        @apply bg-gray-700 scale-125 ;
+    }
 }
