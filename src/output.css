@@ -28,9 +28,11 @@
     --text-clamp: clamp(0.7rem, 1vw, 1rem);
     --text-intro: clamp(1.5rem, 2vw, 2rem);
     --text-des: clamp(1rem, 1.2vw, 2rem);
+    --text-super: clamp(0.9rem, 1vw, 2rem);
     --color-green: #21aa58;
     --color-text_nav: #414141;
     --color-bg_gray: #f2f5f8;
+    --color-text_bg: #404040;
     --color-text_muted: rgba(255, 255, 255, 0.05);
     --color-nav_res: rgba(0, 0, 0, 0.5);
     --color-bg-dark1: #242424;
@@ -638,7 +640,7 @@
     width: calc(11 / 12 * 100%);
     overflow: hidden;
     border-radius: var(--radius-xl);
-    @media (width >= 840px) {
+    @media (width >= 1280px) {
       width: calc(3 / 4 * 100%);
     }
   }
@@ -650,7 +652,7 @@
     @media (width >= 640px) {
       height: 280px;
     }
-    @media (width >= 840px) {
+    @media (width >= 1024px) {
       height: 400px;
     }
   }
@@ -680,6 +682,58 @@
     --tw-scale-z: 125%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
     background-color: var(--color-gray-700);
+  }
+  .about-snapp-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    @media (width >= 1024px) {
+      flex-direction: row;
+    }
+  }
+  .about-snapp-image-wrapper {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    @media (width >= 1024px) {
+      height: auto;
+    }
+    @media (width >= 1024px) {
+      width: calc(1 / 2 * 100%);
+    }
+  }
+  .about-snapp-details {
+    margin-top: calc(var(--spacing) * 6);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-inline: calc(var(--spacing) * 9);
+    text-align: right;
+    @media (width >= 1024px) {
+      width: calc(1 / 2 * 100%);
+    }
+  }
+  .about-snapp-title {
+    font-family: var(--font-Bold);
+    font-size: var(--text-intro);
+    color: var(--color-text_nav);
+    @media (width >= 1280px) {
+      width: calc(5 / 6 * 100%);
+    }
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
+    }
+  }
+  .about-snapp-discription {
+    margin-top: calc(var(--spacing) * 6);
+    font-family: var(--font-Light);
+    font-size: var(--text-super);
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+    color: var(--color-text_bg);
+    @media (width >= 1280px) {
+      width: calc(5 / 6 * 100%);
+    }
   }
 }
 @property --tw-rotate-x {

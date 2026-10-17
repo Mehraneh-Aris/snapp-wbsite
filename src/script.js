@@ -8,8 +8,7 @@ const sliderButtons = document.querySelectorAll(".slider-button");
 const images = [
     "../assect/img/slider/Club.jpg",
     "../assect/img/slider/Food.jpg",
-    "../assect/img/slider/Market.jpg",
-    "../assect/img/slider/super-app.jpg"
+    "../assect/img/slider/Market.jpg"
 ];
 
 menuItem.forEach((item) => {
