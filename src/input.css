@@ -261,7 +261,7 @@
     }
 
     .benefit-snapp-details {
-        @apply basis-[245px] my-5 ;
+        @apply basis-[245px] my-10 ;
     }
 
     .benefit-snapp-image {
@@ -278,5 +278,49 @@
 
     .benefit-description {
         @apply font-Light text-sm dark:text-white ;
+    }
+
+    .login-snapp-section {
+        @apply w-full bg-bg_gray flex justify-center items-center flex-col;
+    }
+
+    .login-snapp-title {
+        @apply text-xl md:text-3xl font-Bold text-text_bg mt-7 dark:text-white px-4;
+    }
+
+    .login-snapp-description {
+        @apply font-Light my-5 dark:text-white px-5;
+    }
+
+    .login-snapp-submit {
+        @apply w-auto bg-green text-white font-Bold flex justify-center items-center cursor-pointer py-3 px-6 rounded-md hover:bg-green-500 my-4 ;
+    }
+
+    .login-video {
+        @apply lg:w-3/4 w-11/12 rounded-lg overflow-hidden ;
+    }
+
+    .video-snapp {
+        @apply w-full;
+    }
+
+    .snapp-options {
+        @apply lg:w-3/4 flex w-full mx-auto flex-wrap justify-between mb-10 ;
+    }
+
+    .snapp-option {
+        @apply lg:w-[48%] w-11/12 mx-auto bg-white rounded-xl flex lg:flex-row flex-col mt-7 px-9 py-10 ;
+    }
+
+    .snapp-option-image {
+        @apply lg:w-[120px] lg:h-[66px] w-[88px]
+    }
+
+    .snapp-option-title {
+        @apply font-Bold text-text_bg ;
+    }
+
+    .snapp-option-description {
+        @apply font-Light text-sm my-2 ;
     }
 }
