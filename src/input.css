@@ -173,7 +173,7 @@
     }
 
     .market-image-wrapper {
-        @apply w-[160px] h-[47] my-2;
+        @apply w-[160px] h-[47px] my-2;
     }
 
     .services-section {
@@ -250,5 +250,33 @@
 
     .about-snapp-discription {
         @apply xl:w-5/6 font-Light text-text_bg text-super leading-7 mt-6 ;
+    }
+
+    .benefit-snapp-section {
+        @apply w-full xl:translate-y-[-100px] translate-y-7 ;
+    }
+
+    .benefit-snapp-content {
+        @apply flex xl:flex-nowrap flex-wrap justify-around xl:w-2/3 w-full mx-auto ;
+    }
+
+    .benefit-snapp-details {
+        @apply basis-[245px] my-5 ;
+    }
+
+    .benefit-snapp-image {
+        @apply w-[210px] h-[190px] bg-bg_gray rounded-3xl ;
+    }
+
+    .benefit-snapp-text {
+        @apply px-4 my-3 text-right ;
+    }
+
+    .benefit-title {
+        @apply font-Bold my-3 dark:text-white ;
+    }
+
+    .benefit-description {
+        @apply font-Light text-sm dark:text-white ;
     }
 }
