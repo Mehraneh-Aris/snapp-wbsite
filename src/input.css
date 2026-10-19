@@ -45,7 +45,12 @@
         @apply no-underline;
     }
     .site-header {
-        @apply w-full border-b-1 border-bg_gray;
+        @apply w-full border-b-1 border-bg_gray  bg-white dark:bg-bg-dark1 z-50;
+    }
+
+    .site-header {
+        position: sticky;
+        top: 0;
     }
 
     .site-header__inner {
@@ -73,7 +78,7 @@
     }
 
     .menu {
-        @apply hidden w-[170px] absolute top-8 list-none bg-white text-text_nav border-1 border-bg_gray flex-col justify-start font-Light rounded-lg leading-9 z-50;
+        @apply hidden w-[170px] absolute top-8 list-none bg-white dark:bg-bg-dark2 text-text_nav dark:text-white border-1 border-bg_gray flex-col justify-start font-Light rounded-lg leading-9 z-50;
     }
 
     .list-product:hover .menu {
@@ -89,7 +94,7 @@
     }
 
     .nav-respon {
-        @apply fixed w-full  bg-nav_res text-xs absolute z-50 ;
+        @apply fixed w-full h-[100%] bg-nav_res text-xs absolute z-50 fixed;
     }
 
     .main-nav-res {
@@ -97,7 +102,7 @@
     }
 
     .nav-list-res {
-        @apply list-none flex flex-col justify-start items-start dark:text-white font-Light mx-7 w-full
+        @apply list-none flex flex-col justify-start items-start dark:text-white font-Light mx-7 w-11/12;
     }
 
     .nav-res-items {
@@ -249,11 +254,11 @@
     }
 
     .about-snapp-discription {
-        @apply xl:w-5/6 font-Light text-text_bg text-super leading-7 mt-6 ;
+        @apply xl:w-5/6 font-Light text-text_bg dark:text-white text-super leading-7 mt-6 ;
     }
 
     .benefit-snapp-section {
-        @apply w-full xl:translate-y-[-100px] translate-y-7 ;
+        @apply w-full xl:translate-y-[-100px] translate-y-7  ;
     }
 
     .benefit-snapp-content {
@@ -281,7 +286,7 @@
     }
 
     .login-snapp-section {
-        @apply w-full bg-bg_gray flex justify-center items-center flex-col;
+        @apply w-full bg-bg_gray dark:bg-bg-dark1 flex justify-center items-center flex-col;
     }
 
     .login-snapp-title {
@@ -337,7 +342,7 @@
     }
 
     .social-link-list {
-        @apply flex my-9 text-text_bg ;
+        @apply flex my-9 text-text_bg dark:stroke-white ;
     }
 
     .social-link {

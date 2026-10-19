@@ -44,6 +44,7 @@
     --color-text_muted: rgba(255, 255, 255, 0.05);
     --color-nav_res: rgba(0, 0, 0, 0.5);
     --color-bg-dark1: #242424;
+    --color-bg-dark2: #000;
   }
 }
 @layer base {
@@ -223,8 +224,11 @@
   .dark\:rounded-sm:where(.dark, .dark *) {
     border-radius: var(--radius-sm);
   }
-  .dark\:bg-white:where(.dark, .dark *) {
-    background-color: var(--color-white);
+  .dark\:bg-bg-dark1:where(.dark, .dark *) {
+    background-color: var(--color-bg-dark1);
+  }
+  .dark\:stroke-white:where(.dark, .dark *) {
+    stroke: var(--color-white);
   }
 }
 @font-face {
@@ -240,10 +244,17 @@
     text-decoration-line: none;
   }
   .site-header {
+    z-index: 50;
     width: 100%;
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
     border-color: var(--color-bg_gray);
+    background-color: var(--color-white);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-bg-dark1);
+    }
+    position: sticky;
+    top: 0;
   }
   .site-header__inner {
     margin: auto;
@@ -326,6 +337,12 @@
     --tw-leading: calc(var(--spacing) * 9);
     line-height: calc(var(--spacing) * 9);
     color: var(--color-text_nav);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-bg-dark2);
+    }
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
+    }
   }
   .list-product:hover .menu {
     display: flex;
@@ -344,6 +361,7 @@
     position: absolute;
     position: fixed;
     z-index: 50;
+    height: 100%;
     width: 100%;
     background-color: var(--color-nav_res);
     font-size: var(--text-xs);
@@ -372,7 +390,7 @@
   .nav-list-res {
     margin-inline: calc(var(--spacing) * 7);
     display: flex;
-    width: 100%;
+    width: calc(11 / 12 * 100%);
     list-style-type: none;
     flex-direction: column;
     align-items: flex-start;
@@ -742,6 +760,9 @@
     @media (width >= 1280px) {
       width: calc(5 / 6 * 100%);
     }
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
+    }
   }
   .benefit-snapp-section {
     width: 100%;
@@ -802,6 +823,9 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-bg_gray);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-bg-dark1);
+    }
   }
   .login-snapp-title {
     margin-top: calc(var(--spacing) * 7);
@@ -931,6 +955,9 @@
     margin-block: calc(var(--spacing) * 9);
     display: flex;
     color: var(--color-text_bg);
+    &:where(.dark, .dark *) {
+      stroke: var(--color-white);
+    }
   }
   .social-link {
     margin-inline: calc(var(--spacing) * 2);
