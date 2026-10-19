@@ -233,11 +233,11 @@
 }
 @font-face {
   font-family: "iran_Bold";
-  src: url(../assect/fonts/IRANSansXFaNum-Bold.ttf) format("truetype");
+  src: url(./assect/fonts/IRANSansXFaNum-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "iran_Light";
-  src: url(../assect/fonts/IRANSansXFaNum-Light.ttf) format("truetype");
+  src: url(./assect/fonts/IRANSansXFaNum-Light.ttf) format("truetype");
 }
 @layer components {
   a {
