@@ -1,0 +1,359 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: "iran_Bold";
+    src: url(./assect/fonts/IRANSansXFaNum-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "iran_Light";
+    src: url(./assect/fonts/IRANSansXFaNum-Light.ttf) format("truetype");
+}
+
+@theme {
+    --font-Bold: "iran_Bold", sans-serif;
+    --font-Light: "iran_Light", sans-serif;
+
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 840px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+
+    --text-clamp: clamp(0.7rem, 1vw, 1rem);
+    --text-intro: clamp(1.5rem, 2vw, 2rem);
+    --text-des: clamp(1rem, 1.2vw, 2rem);
+    --text-super: clamp(0.9rem, 1vw, 2rem);
+
+    --color-green: #21aa58;
+    --color-text_nav: #414141;
+    --color-bg_gray: #f2f5f8;
+    --color-text_bg: #404040;
+    --color-text_muted: rgba(255, 255, 255, 0.05);
+    --color-nav_res: rgba(0, 0, 0, 0.5);
+    --color-bg-dark1: #242424;
+    --color-bg-dark2: #000;
+    --color-white: #fff;
+
+}
+
+@layer components {
+
+    a {
+        @apply no-underline;
+    }
+    .site-header {
+        @apply w-full border-b-1 border-bg_gray  bg-white dark:bg-bg-dark1 z-50;
+    }
+
+    .site-header {
+        position: sticky;
+        top: 0;
+    }
+
+    .site-header__inner {
+        @apply sm:w-full md:w-4/5 h-[70px] md:h-[90px] m-auto flex justify-start items-center;
+    }
+
+    .site-header__mobile {
+        @apply flex md:hidden justify-between w-full flex-nowrap mx-5;
+    }
+
+    .snapp-logo {
+        @apply md:flex hidden;
+    }
+
+    .nav-list {
+        @apply text-clamp list-none dark:text-white justify-start items-center font-Light mx-7 h-[55px] md:flex hidden;
+    }
+
+    .list-content {
+        @apply flex items-center hover:text-green cursor-pointer py-1 px-2;
+    }
+
+    .list-product {
+        @apply relative;
+    }
+
+    .menu {
+        @apply hidden w-[170px] absolute top-8 list-none bg-white dark:bg-bg-dark2 text-text_nav dark:text-white border-1 border-bg_gray flex-col justify-start font-Light rounded-lg leading-9 z-50;
+    }
+
+    .list-product:hover .menu {
+        @apply flex;
+    }
+
+    .content-menu {
+        @apply flex items-center cursor-pointer px-4 py-1 ;
+    }
+
+    .content-menu:hover {
+        @apply text-green;
+    }
+
+    .nav-respon {
+        @apply fixed w-full h-[100%] bg-nav_res text-xs absolute z-50 fixed;
+    }
+
+    .main-nav-res {
+        @apply sm:w-1/2 w-full h-screen bg-white dark:bg-bg-dark1 border-l-1 sm:flex md:hidden overflow-y-auto;
+    }
+
+    .nav-list-res {
+        @apply list-none flex flex-col justify-start items-start dark:text-white font-Light mx-7 w-11/12;
+    }
+
+    .nav-res-items {
+        @apply flex flex-col items-center cursor-default font-Bold w-full my-4 ;
+    }
+
+    .items-list {
+        @apply flex justify-between items-center w-full cursor-pointer;
+    }
+
+    .menu-res {
+        @apply hidden static w-full border-none bg-transparent rounded-none shadow-none ;
+    }
+
+    .menu-res.show {
+        @apply flex flex-col;
+    }
+
+    .navbar-items {
+        @apply items-start font-Light;
+    }
+
+    .hero-section {
+        @apply w-full flex;
+    }
+
+    .hero-image-wrapper {
+        @apply  hidden lg:w-1/2 md:w-1/3 md:flex  object-cover ;
+    }
+
+    .hero-image-wrapper {
+        transform: scaleX(-1);
+    }
+
+    .hero-content {
+        @apply w-full lg:w-1/2 md:w-2/3 bg-green flex justify-center items-end flex-col text-white px-7 py-2 ;
+    }
+
+    .hero-details {
+        @apply w-full md:w-3/4 ;
+    }
+
+    .subtitle {
+        @apply text-intro font-Bold md:leading-[60px] lg:leading-[50px] ;
+    }
+
+    .description {
+        @apply text-des font-Light leading-10 my-5;
+    }
+
+    .contact {
+        @apply md:flex w-full justify-start hidden ;
+    }
+
+    .tel-contact-input {
+        @apply bg-transparent border-b-2 border-white outline-none mx-3 placeholder-white text-right py-2;
+    }
+
+    .submit-btn {
+        @apply bg-white text-green cursor-pointer font-Light rounded-md px-5 py-2
+    }
+
+    .snapp-web-btn {
+        @apply border border-white rounded-md text-white px-4 py-3 cursor-pointer font-Light mt-8 mb-3 md:inline-block hidden hover:bg-text_muted ;
+    }
+
+    .snapp-app-btn {
+        @apply border border-white rounded-md text-black px-4 py-3 cursor-pointer font-Light mt-8 mb-3 md:hidden flex justify-center items-center bg-white ;    
+    }
+
+    .market-section {
+        @apply w-3/4 md:flex hidden flex-wrap justify-around items-center mx-auto my-20 ;
+    }
+
+    .market-image-wrapper {
+        @apply w-[160px] h-[47px] my-2;
+    }
+
+    .services-section {
+        @apply w-full bg-bg_gray flex justify-center items-center flex-col ;
+    }
+
+    .services-title {
+        @apply text-intro text-text_nav font-Bold my-8 ;
+    }
+
+    .services-container {
+        @apply w-3/4 flex flex-wrap justify-start items-start mx-auto ;
+    }
+
+    .services-container-card{
+        @apply w-1/3 my-4 ;
+    }
+
+    .services-card {
+        @apply w-3/4 bg-white rounded-2xl flex lg:flex-row flex-col py-3 px-2 items-center ;
+    }
+
+    .services-icon {
+        @apply w-[65px] h-[65px] rounded-xl flex lg:justify-center ;
+    }
+
+    .services-content {
+        @apply flex flex-col justify-center lg:items-start items-center lg:text-right text-center ;
+    }
+
+    .services-content-title {
+        @apply font-Bold mx-3 ;
+    }
+
+    .services-description {
+        @apply font-Light md:flex hidden text-text_nav mx-3 ;
+    }
+
+    .slider-section {
+        @apply xl:w-3/4 relative w-11/12 rounded-xl overflow-hidden mx-auto my-14 ;
+    }
+
+    .slider-image-wrapper {
+        @apply w-full h-[200px] sm:h-[280px] lg:h-[400px] object-cover object-center  ;
+    }
+
+    .slider-button-container {
+        @apply absolute bottom-4 flex justify-center backdrop-blur-sm w-full bg-[rgba(255,255,255,0.5)] py-2 ;
+    }
+
+    .slider-button {
+        @apply cursor-pointer size-[10px] rounded-full bg-gray-500 mx-1 ;
+    }
+
+    .slider-button.active {
+        @apply bg-gray-700 scale-125 ;
+    }
+
+    .about-snapp-section {
+        @apply w-full flex lg:flex-row flex-col ;
+    }
+
+    .about-snapp-image-wrapper {
+        @apply w-full lg:w-1/2 lg:h-auto object-cover object-center;
+    }
+
+    .about-snapp-details {
+        @apply w-full lg:w-1/2 text-right flex flex-col mt-6 px-9 ;
+    }
+
+    .about-snapp-title {
+        @apply xl:w-5/6 text-intro text-text_nav font-Bold dark:text-white ;
+    }
+
+    .about-snapp-discription {
+        @apply xl:w-5/6 font-Light text-text_bg dark:text-white text-super leading-7 mt-6 ;
+    }
+
+    .benefit-snapp-section {
+        @apply w-full xl:translate-y-[-100px] translate-y-7  ;
+    }
+
+    .benefit-snapp-content {
+        @apply flex xl:flex-nowrap flex-wrap justify-around xl:w-2/3 w-full mx-auto ;
+    }
+
+    .benefit-snapp-details {
+        @apply basis-[245px] my-10 ;
+    }
+
+    .benefit-snapp-image {
+        @apply w-[210px] h-[190px] bg-bg_gray rounded-3xl ;
+    }
+
+    .benefit-snapp-text {
+        @apply px-4 my-3 text-right ;
+    }
+
+    .benefit-title {
+        @apply font-Bold my-3 dark:text-white ;
+    }
+
+    .benefit-description {
+        @apply font-Light text-sm dark:text-white ;
+    }
+
+    .login-snapp-section {
+        @apply w-full bg-bg_gray dark:bg-bg-dark1 flex justify-center items-center flex-col;
+    }
+
+    .login-snapp-title {
+        @apply text-xl md:text-3xl font-Bold text-text_bg mt-7 dark:text-white px-4;
+    }
+
+    .login-snapp-description {
+        @apply font-Light my-5 dark:text-white px-5;
+    }
+
+    .login-snapp-submit {
+        @apply w-auto bg-green text-white font-Bold flex justify-center items-center cursor-pointer py-3 px-6 rounded-md hover:bg-green-500 my-4 ;
+    }
+
+    .login-video {
+        @apply lg:w-3/4 w-11/12 rounded-lg overflow-hidden ;
+    }
+
+    .video-snapp {
+        @apply w-full;
+    }
+
+    .snapp-options {
+        @apply lg:w-3/4 flex w-full mx-auto flex-wrap justify-between mb-10 ;
+    }
+
+    .snapp-option {
+        @apply lg:w-[48%] w-11/12 mx-auto bg-white rounded-xl flex lg:flex-row flex-col mt-7 px-9 py-10 ;
+    }
+
+    .snapp-option-image {
+        @apply lg:w-[120px] lg:h-[66px] w-[88px]
+    }
+
+    .snapp-option-title {
+        @apply font-Bold text-text_bg ;
+    }
+
+    .snapp-option-description {
+        @apply font-Light text-sm my-2 ;
+    }
+
+    .footer-section {
+        @apply w-full flex justify-center items-center flex-col my-9 ;
+    }
+
+    .footer-menu {
+        @apply flex flex-wrap w-3/4 justify-center font-Light text-sm mx-auto dark:text-white ; 
+    }
+
+    .footer-items {
+        @apply m-3 ;
+    }
+
+    .social-link-list {
+        @apply flex my-9 text-text_bg dark:stroke-white ;
+    }
+
+    .social-link {
+        @apply mx-2 ;
+    }
+
+    .foooter-image {
+        @apply flex dark:bg-white dark:p-4 rounded-md ;
+    }
+
+    .namad-image {
+        @apply w-[130px] h-[130px] mx-3 ;
+    }
+}
