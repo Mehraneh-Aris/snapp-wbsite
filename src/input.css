@@ -323,4 +323,32 @@
     .snapp-option-description {
         @apply font-Light text-sm my-2 ;
     }
+
+    .footer-section {
+        @apply w-full flex justify-center items-center flex-col my-9 ;
+    }
+
+    .footer-menu {
+        @apply flex flex-wrap w-3/4 justify-center font-Light text-sm mx-auto dark:text-white ; 
+    }
+
+    .footer-items {
+        @apply m-3 ;
+    }
+
+    .social-link-list {
+        @apply flex my-9 text-text_bg ;
+    }
+
+    .social-link {
+        @apply mx-2 ;
+    }
+
+    .foooter-image {
+        @apply flex dark:bg-white dark:p-4 rounded-md ;
+    }
+
+    .namad-image {
+        @apply w-[130px] h-[130px] mx-3 ;
+    }
 }

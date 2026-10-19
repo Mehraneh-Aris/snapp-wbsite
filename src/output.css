@@ -903,6 +903,53 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .footer-section {
+    margin-block: calc(var(--spacing) * 9);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-menu {
+    margin-inline: auto;
+    display: flex;
+    width: calc(3 / 4 * 100%);
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: var(--font-Light);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
+    }
+  }
+  .footer-items {
+    margin: calc(var(--spacing) * 3);
+  }
+  .social-link-list {
+    margin-block: calc(var(--spacing) * 9);
+    display: flex;
+    color: var(--color-text_bg);
+  }
+  .social-link {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .foooter-image {
+    display: flex;
+    border-radius: var(--radius-md);
+    &:where(.dark, .dark *) {
+      background-color: var(--color-white);
+    }
+    &:where(.dark, .dark *) {
+      padding: calc(var(--spacing) * 4);
+    }
+  }
+  .namad-image {
+    margin-inline: calc(var(--spacing) * 3);
+    height: 130px;
+    width: 130px;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
